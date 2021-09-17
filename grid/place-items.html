@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>place-items</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 'a b''c d';
+        }
+
+        .start {
+            place-items: start;
+        }
+
+        .center {
+            place-items: center;
+        }
+
+        .center-end {
+            place-items: center end;
+        }
+
+        .end-stretch {
+            place-items: end stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>place-items</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>place-items</b> shorthand for align-items | justify-items</p>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>place-items: start (align-items=start | justify-items=start)</h3>
+            <div class="container start">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-c">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>place-items: center</h3>
+            <div class="container center">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-c">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>place-items: center end <span style="font-size: 16px">(align-items=center |
+                    justify-items=end)</span></h3>
+            <div class="container center-end">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>place-items: end stretch</h3>
+            <div class="container end-stretch">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

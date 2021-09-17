@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>flex-flow</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .items {
+            width: 150px;
+            height: 150px;
+            flex-grow: 1;
+            padding: 20px 27px;
+        }
+
+        .row-wrap-reverse {
+            flex-flow: row wrap-reverse;
+        }
+
+        .row-wrap {
+            flex-flow: row wrap;
+        }
+
+        .column {
+            flex-flow: column;
+        }
+
+        .column-reverse-wrap {
+            flex-flow: column-reverse wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>flex-flow</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>flex-flow</b> shorthand for flex-direction | flex-wrap</p>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>flex-direction: row wrap-reverse</h3>
+            <div class="container row-wrap-reverse">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-direction: row wrap</h3>
+            <div class="container row-wrap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-flow: column</h3>
+            <div class="container column">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-flow: column-reverse wrap</h3>
+            <div class="container column-reverse-wrap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>

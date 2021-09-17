@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>auto-fit | auto-fill</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            width: 100%;
+            height: auto;
+        }
+
+        .items {
+            padding: 33px 40px;
+        }
+
+        .auto-fit {
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        }
+
+        .auto-fill {
+            grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>auto-fit | auto-fill</h2>
+        <p style="margin-top: 0; margin-bottom: 10px">use <b>auto-fit or auto-fill</b> with grid-template-rows or
+            grid-template-columns repeat function first argument</p>
+
+    </section>
+    <section class="main">
+
+        <h3>grid-template-columns: repeat(auto-fit, minmax(200px, auto))</h3>
+        <div class="container auto-fit">
+            <div class="items item-a">A</div>
+            <div class="items item-b">B</div>
+            <div class="items item-c">C</div>
+            <div class="items item-d">D</div>
+        </div>
+
+
+        <h3 style="margin-top: 30px">grid-template-columns: repeat(auto-fill, minmax(200px, auto))</h3>
+        <div class="container auto-fill">
+            <div class="items item-a">A</div>
+            <div class="items item-b">B</div>
+            <div class="items item-c">C</div>
+            <div class="items item-d">D</div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

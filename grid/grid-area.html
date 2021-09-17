@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>grid-area</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .items {
+            padding: 0;
+        }
+
+        /* area name */
+        .area-name {
+            grid-template:
+                'a b b c'
+                'd e e f'
+                'd e e f'
+                'g h h i';
+        }
+
+        .area-name .item-a {
+            grid-area: a;
+        }
+
+        .area-name .item-b {
+            grid-area: b;
+        }
+
+        .area-name .item-c {
+            grid-area: c;
+        }
+
+        .area-name .item-d {
+            grid-area: d;
+        }
+
+        .area-name .item-e {
+            grid-area: e;
+        }
+
+        .area-name .item-f {
+            grid-area: f;
+        }
+
+        .area-name .item-g {
+            grid-area: g;
+        }
+
+        .area-name .item-h {
+            grid-area: h;
+        }
+
+        .area-name .item-i {
+            grid-area: i;
+        }
+
+        /* area row / column */
+        .area-row-column {
+            grid-template: repeat(4, auto) / repeat(4, auto);
+        }
+
+        .area-row-column .item-a {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .area-row-column .item-b {
+            grid-area: 1 / 2 / 2 / 4;
+        }
+
+        .area-row-column .item-c {
+            grid-area: 1 / 4 / 2 / 5;
+        }
+
+        .area-row-column .item-d {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+
+        .area-row-column .item-e {
+            grid-area: 2 / 2 / 4 / 4;
+        }
+
+        .area-row-column .item-f {
+            grid-area: 2 / 4 / 4 / 5;
+        }
+
+        .area-row-column .item-g {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+
+        .area-row-column .item-h {
+            grid-area: 4 / 2 / 5 / 4;
+        }
+
+        .area-row-column .item-i {
+            grid-area: 4 / 4 / 5 / 5;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>grid-area</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>grid-area</b> shorthand for grid-template-rows |
+            grid-template-columns | grid-template-areas</p>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>grid-area: 'a b b c' 'd e e f' 'd e e f' 'g h h i' (area name)</h3>
+            <div class="container area-name">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-area: [a=1/1/2/2, b=1/2/2/4, c=1/4/2/5, ...] (area row / column)</h3>
+            <div class="container area-row-column">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>flex-grow</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .items {
+            padding: 20px;
+        }
+
+        .flex-grow-1 {
+            flex-grow: 0;
+        }
+
+        .flex-grow-2 .items {
+            flex-grow: 1;
+        }
+
+        .flex-grow-3 .item-a {
+            flex-grow: 1;
+        }
+
+        .flex-grow-3 .item-b {
+            flex-grow: 2;
+        }
+
+        .flex-grow-3 .item-c {
+            flex-grow: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>flex-grow</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>flex-grow: 0 (default)</h3>
+            <div class="container flex-grow-1">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-grow: 1 (all items)</h3>
+            <div class="container flex-grow-2">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-grow: [a=1, b=2, c=3]</h3>
+            <div class="container flex-grow-3">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

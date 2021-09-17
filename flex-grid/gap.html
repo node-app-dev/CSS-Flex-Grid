@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>row-gap | column-gap | gap</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 'a b c''d e f''g h i';
+            gap: 0;
+        }
+
+        .row-gap {
+            row-gap: 20px;
+        }
+
+        .column-gap {
+            column-gap: 20px;
+        }
+
+        .gap {
+            gap: 20px;
+        }
+
+        .gap-row-column {
+            gap: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>row-gap | column-gap | gap</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>gap</b> shorthand for row-gap | column-gap</p>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>row-gap: 20px</h3>
+            <div class="container row-gap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>column-gap: 20px</h3>
+            <div class="container column-gap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>gap: 20px (row | column)</h3>
+            <div class="container gap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>gap: 10px 20px (row | column)</h3>
+            <div class="container gap-row-column">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

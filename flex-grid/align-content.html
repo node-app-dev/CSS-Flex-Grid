@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>align-content</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 'a b''c d';
+        }
+
+        .stretch {
+            align-content: stretch;
+        }
+
+        .start {
+            align-content: flex-start;
+        }
+
+        .center {
+            align-content: center;
+        }
+
+        .end {
+            align-content: flex-end;
+        }
+
+        .space-between {
+            align-content: space-between;
+        }
+
+        .space-around {
+            align-content: space-around;
+        }
+
+        .space-evenly {
+            align-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>align-content</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>align-content: stretch (default)</h3>
+            <div class="container stretch">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-c">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-content: start</h3>
+            <div class="container start">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-c">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-content: center</h3>
+            <div class="container center">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-content: end</h3>
+            <div class="container end">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-content: space-between</h3>
+            <div class="container space-between">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-content: space-around</h3>
+            <div class="container space-around">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-content: space-evenly</h3>
+            <div class="container space-evenly">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

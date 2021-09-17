@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>max-content</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            width: 800px;
+        }
+
+        .items {
+            padding: 6px;
+            font-size: 18px;
+        }
+
+        .max-content {
+            grid-template-columns: max-content max-content 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>max-content</h2>
+        <p style="margin-top: 0; margin-bottom: 10px">use <b>max-content</b> with grid-template-rows or
+            grid-template-columns</p>
+
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>
+                <pre>           max-content                                  max-content                           1fr</pre>
+            </h3>
+            <div class="container max-content">
+                <div class="items item-a">Item as wide as the content.</div>
+                <div class="items item-b">Item with more text in it which will overflow the fixed width box.</div>
+                <div class="items item-c">Flexible item</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 5px;
+    gap: 5px;
+}
+
+.items {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    flex: auto;
+    order: 1;
+    align-self: center;
+}

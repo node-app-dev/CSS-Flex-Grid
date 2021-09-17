@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>order</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .items {
+            /* height: 150px; */
+            flex-grow: 1;
+        }
+
+        .order-1 .item-a {
+            order: 2;
+        }
+
+        .order-1 .item-b {
+            order: 1;
+        }
+
+        .order-2 .item-a {
+            order: 1;
+        }
+
+        .order-2 .item-c {
+            order: -1;
+        }
+
+        .order-2 .item-b {
+            order: -2;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>order</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>order: [a=2, b=1, c=0, d=0] (0 default)</h3>
+            <div class="container order-1">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>order: [a=1, b=-2, c=-1, d=0] (0 default)</h3>
+            <div class="container order-2">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

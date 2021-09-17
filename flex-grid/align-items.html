@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>align-items</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 'a b''c d';
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .start {
+            align-items: start;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .end {
+            align-items: end;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+
+        .line {
+            position: relative;
+            border: none;
+            border-top: 1px solid #ffffff;
+            margin: 0 6px;
+        }
+
+        .line-1 {
+            top: 81px;
+        }
+
+        .line-2 {
+            top: 334px;
+        }
+
+        .baseline .item-a {
+            font-size: 3rem !important;
+        }
+
+        .baseline .item-b {
+            font-size: 2rem !important;
+        }
+
+        .baseline .item-c {
+            font-size: 24px !important;
+        }
+
+        .baseline .item-d {
+            font-size: 3.4rem !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>align-items</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>align-items: stretch (default)</h3>
+            <div class="container stretch">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-items: start</h3>
+            <div class="container start">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-items: center</h3>
+            <div class="container center">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-items: end</h3>
+            <div class="container end">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>align-items: baseline</h3>
+            <hr class="line line-1">
+            <hr class="line line-2">
+            <div class="container baseline">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

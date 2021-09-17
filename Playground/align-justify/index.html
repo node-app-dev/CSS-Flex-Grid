@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>align | justify Playground</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .selector {
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-around;
+            column-gap: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .selector-item {
+            margin-bottom: 10px;
+            grid-template-columns: 1fr 4fr;
+            column-gap: 4px;
+        }
+
+        .self-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 6px;
+        }
+
+        .container {
+            display: grid;
+            flex-wrap: wrap;
+        }
+
+        .place div {
+            display: grid;
+            justify-items: start;
+            grid-template-columns: 3fr 6fr;
+        }
+
+        .place p {
+            margin: 2px 0;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2 style="margin-top: 0">Align or Justify for the grid and flex</h2>
+    </section>
+
+    <section class="main">
+
+        <div class="selector-container" id="selectorContainer">
+
+            <!-- Container -->
+            <h4 class="title">Container</h4>
+
+            <!-- display -->
+            <div class="selector" id="displayContainer" style="margin-bottom: 20px">
+                <div>
+                    <label for="grid">grid: </label>
+                    <input type="radio" class="form-check-input" name="display" id="grid" value="grid" checked>
+                </div>
+                <div>
+                    <label for="flex">flex: </label>
+                    <input type="radio" class="form-check-input" name="display" id="flex" value="flex">
+                </div>
+            </div>
+
+
+            <!-- align-content or justify-content -->
+            <div class="selector">
+                <div>
+                    <label for="alignContentCheckbox">align-content: </label>
+                    <input type="checkbox" class="form-check-input" id="alignContentCheckbox" value="align-content">
+                </div>
+                <div>
+                    <label for="justifyContentCheckbox">justify-content: </label>
+                    <input type="checkbox" class="form-check-input" id="justifyContentCheckbox" value="justify-content">
+                </div>
+            </div>
+            <!-- align-content selector or justify-content selector -->
+            <div class="selector" style="margin-bottom: 24px">
+                <select id="alignContentSelector" class="form-select">
+                    <option value="stretch">stretch</option>
+                    <option value="start" class="flex">start</option>
+                    <option value="center">center</option>
+                    <option value="end" class="flex">end</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </select>
+
+                <select id="justifyContentSelector" class="form-select">
+                    <option value="stretch">stretch</option>
+                    <option value="start" class="flex">start</option>
+                    <option value="center">center</option>
+                    <option value="end" class="flex">end</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </select>
+            </div>
+
+
+            <!-- align-items or justify-items -->
+            <div class="selector">
+                <div>
+                    <label for="alignItemsCheckbox">align-items: </label>
+                    <input type="checkbox" class="form-check-input" id="alignItemsCheckbox" value="align-items">
+                </div>
+                <div>
+                    <label for="justifyItemsCheckbox">justify-items: </label>
+                    <input type="checkbox" class="form-check-input" id="justifyItemsCheckbox" value="justify-items">
+                </div>
+            </div>
+
+            <!-- align-items selector or justify-items selector -->
+            <div class="selector">
+                <select id="alignItemsSelector" class="form-select">
+                    <option value="stretch">stretch</option>
+                    <option value="start" class="flex">start</option>
+                    <option value="center">center</option>
+                    <option value="end" class="flex">end</option>
+                    <option value="baseline">baseline</option>
+                </select>
+
+                <select id="justifyItemsSelector" class="form-select">
+                    <option value="stretch">stretch</option>
+                    <option value="start" class="flex">start</option>
+                    <option value="center">center</option>
+                    <option value="end" class="flex">end</option>
+                    <option value="baseline">baseline</option>
+                </select>
+            </div>
+
+
+            <!-- Items -->
+            <h4 class="title" style="margin-top: 40px">Items</h4>
+
+            <div class="selector selector-item">
+                <div>items:</div>
+                <div class="self-selector">
+                    <div>align-self:</div>
+                    <div>justify-self:</div>
+                </div>
+            </div>
+
+            <div class="selector selector-item">
+                <div>
+                    <label for="itemACheckbox">A: </label>
+                    <input type="checkbox" class="form-check-input" id="itemACheckbox" value="a">
+                </div>
+                <div class="self-selector">
+                    <select class="form-select" id="alignSelfSelectorA" name="align-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                    <select class="form-select" id="justifySelfSelectorA" name="justify-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="selector selector-item">
+                <div>
+                    <label for="itemBCheckbox">B: </label>
+                    <input type="checkbox" class="form-check-input" id="itemBCheckbox" value="b">
+                </div>
+                <div class="self-selector">
+                    <select class="form-select" id="alignSelfSelectorB" name="align-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                    <select class="form-select" id="justifySelfSelectorB" name="justify-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="selector selector-item">
+                <div>
+                    <label for="itemCCheckbox">C: </label>
+                    <input type="checkbox" class="form-check-input" id="itemCCheckbox" value="c">
+                </div>
+                <div class="self-selector">
+                    <select class="form-select" id="alignSelfSelectorC" name="align-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                    <select class="form-select" id="justifySelfSelectorC" name="justify-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="selector selector-item">
+                <div>
+                    <label for="itemDCheckbox">D: </label>
+                    <input type="checkbox" class="form-check-input" id="itemDCheckbox" value="d">
+                </div>
+                <div class="self-selector">
+                    <select class="form-select" id="alignSelfSelectorD" name="align-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                    <select class="form-select" id="justifySelfSelectorD" name="justify-self">
+                        <option value="stretch">stretch</option>
+                        <option value="start" class="flex">start</option>
+                        <option value="center">center</option>
+                        <option value="end" class="flex">end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Place -->
+            <h4 class="title" style="margin-top: 40px; margin-bottom: 4px">place shorthand for:</h4>
+
+            <div class="place">
+                <div>
+                    <p>place-content: </p>
+                    <p>align-content &nbsp;|&nbsp; justify-content</p>
+                </div>
+                <div>
+                    <p>place-items: </p>
+                    <p>align-items &nbsp;|&nbsp; justify-items</p>
+                </div>
+                <div>
+                    <p>place-self: </p>
+                    <p>align-self &nbsp;|&nbsp; justify-self</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- selector-container end -->
+
+
+        <!-- Container -->
+        <div class="container" id="container">
+            <div class="items item-a">A</div>
+            <div class="items item-b">B</div>
+            <div class="items item-c">C</div>
+            <div class="items item-d">D</div>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

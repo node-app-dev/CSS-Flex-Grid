@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>grid-auto-rows | grid-auto-columns</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .auto-row {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-auto-rows: 100px;
+        }
+
+        .auto-column {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-columns: 100px;
+        }
+
+        .auto-column .item-c {
+            grid-column: 3 / 4;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>grid-auto-rows | grid-auto-columns</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>grid-auto-rows: 100px</h3>
+            <div class="container auto-row">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">auto</div>
+                <div class="items item-h">auto</div>
+                <div class="items item-i">auto</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-auto-columns: 100px</h3>
+            <div class="container auto-column">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">auto</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">auto</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">auto</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

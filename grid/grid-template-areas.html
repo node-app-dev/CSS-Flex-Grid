@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>grid-template-areas</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .items {
+            padding: 0;
+        }
+
+        .grid-template-areas-1 {
+            grid-template-areas:
+                'a b c'
+                'd e f'
+                'g h i';
+        }
+
+        .grid-template-areas-2 {
+            grid-template-areas:
+                'a b c'
+                'd . e'
+                'f g h';
+        }
+
+        .grid-template-areas-3 {
+            grid-template-areas:
+                'a a b b'
+                'c d d e'
+                'c d d e'
+                'f f g g';
+        }
+
+        .item-a {
+            grid-area: a;
+        }
+
+        .item-b {
+            grid-area: b;
+        }
+
+        .item-c {
+            grid-area: c;
+        }
+
+        .item-d {
+            grid-area: d;
+        }
+
+        .item-e {
+            grid-area: e;
+        }
+
+        .item-f {
+            grid-area: f;
+        }
+
+        .item-g {
+            grid-area: g;
+        }
+
+        .item-h {
+            grid-area: h;
+        }
+
+        .item-i {
+            grid-area: i;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>grid-template-areas</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>grid-template-areas: 'a b c' 'd e f' 'g h i'</h3>
+            <div class="container grid-template-areas-1">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-template-areas: 'a b c' 'd . f' 'g h i' ( . = empty cell)</h3>
+            <div class="container grid-template-areas-2">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-template-areas: 'a a b b' 'c d d e' 'c d d e' 'f f g g'</h3>
+            <div class="container grid-template-areas-3">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+            </div>
+        </section>
+
+
+    </section>
+
+</body>
+
+</html>

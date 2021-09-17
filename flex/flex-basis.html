@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>flex-basis</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .items {
+            padding: 20px;
+        }
+
+        .flex-basis-1 .items {
+            flex-basis: auto;
+        }
+
+        .flex-basis-2 .items {
+            flex-basis: 150px;
+        }
+
+        .flex-basis-3 .item-a {
+            flex-basis: 100px;
+        }
+
+        .flex-basis-3 .item-b {
+            flex-basis: 200px;
+        }
+
+        .flex-basis-3 .item-c {
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>flex-basis</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>flex-basis: auto (default)</h3>
+            <div class="container flex-basis-1">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-basis: 150px (all items)</h3>
+            <div class="container flex-basis-2">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex-basis: [a=100px, b=200px, c=50%]</h3>
+            <div class="container flex-basis-3">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

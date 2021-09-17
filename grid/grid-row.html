@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>grid-row</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .grid-row-start-end,
+        .grid-row {
+            grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+        }
+
+        .grid-row-start-end .item-a {
+            grid-row-start: span 2;
+            /* grid-row-end: 3; */
+        }
+
+        .grid-row-start-end .item-b {
+            grid-row-start: 3;
+            grid-row-end: span 2;
+        }
+
+        .grid-row-start-end .item-c {
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+
+        .grid-row .item-a {
+            grid-row: span 2;
+        }
+
+        .grid-row .item-b {
+            grid-row: 3 / span 2;
+        }
+
+        .grid-row .item-c {
+            grid-row: 1 / 5;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>grid-row-start | grid-row-end | grid-row</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>grid-row</b> shorthand for grid-row-start or
+            grid-row-end</p>
+
+    </section>
+    <section class="main">
+
+        <section>
+            <h3><span style="font-size: 18px">grid-row-start: [a=span 2, b=3 c=1] | grid-row-end: [b=span 2, c=5]</span>
+            </h3>
+            <div class="container grid-row-start-end">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-column: [a=span 2, b=3 / span 2, c=1 / 5]</h3>
+            <div class="container grid-row">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

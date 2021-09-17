@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>fit-content()</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            width: 800px;
+        }
+
+        .items {
+            padding: 6px;
+            font-size: 18px;
+        }
+
+        .fit-content {
+            grid-template-columns: fit-content(400px) fit-content(400px) 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>fit-content()</h2>
+        <p style="margin-top: 0; margin-bottom: 10px">use <b>fit-content()</b> with grid-template-rows or
+            grid-template-columns</p>
+
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>
+                <pre>     fit-content(400px)                    fit-content(400px)                          1fr</pre>
+            </h3>
+            <div class="container fit-content">
+                <div class="items item-a">Item as wide as the content.</div>
+                <div class="items item-b">Item with more text in it. Because the contents of it are wider than the
+                    maximum width, it is clamped at 400 pixels.</div>
+                <div class="items item-c">Flexible item</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

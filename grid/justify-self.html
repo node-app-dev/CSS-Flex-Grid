@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>justify-self</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 'a b''c d';
+        }
+
+        .item-a {
+            background-color: #ff0037;
+        }
+
+        .stretch {
+            justify-self: stretch;
+        }
+
+        .start {
+            justify-self: start;
+        }
+
+        .center {
+            justify-self: center;
+        }
+
+        .end {
+            justify-self: end;
+        }
+
+        .baseline {
+            justify-self: baseline;
+        }
+
+        .line {
+            position: relative;
+            border: none;
+            border-top: 1px solid #ffffff;
+            margin: 0 6px;
+            transform: rotate(90deg);
+            top: 260px;
+            right: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>justify-self</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>justify-self: stretch (default)</h3>
+            <div class="container">
+                <div class="items item-a stretch">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>justify-self: start</h3>
+            <div class="container">
+                <div class="items item-a start">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>justify-self: center</h3>
+            <div class="container">
+                <div class="items item-a center">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>justify-self: end</h3>
+            <div class="container">
+                <div class="items item-a end">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>justify-self: baseline</h3>
+            <hr class="line">
+            <div class="container">
+                <div class="items item-a baseline">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

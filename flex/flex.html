@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>flex</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .items {
+            padding: 20px;
+        }
+
+        .flex-1 .items {
+            flex: none;
+        }
+
+        .flex-2 .items {
+            flex: 1 1;
+        }
+
+        .flex-3 .item-a {
+            flex: 150px 0;
+        }
+
+        .flex-3 .item-b {
+            flex: 1;
+        }
+
+        .flex-3 .item-c {
+            flex: 0;
+        }
+
+        .flex-4 .items {
+            flex: 1 1 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>flex</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>flex</b> shorthand for flex-grow | flex-shrink | flex-basis</p>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>flex: none</h3>
+            <div class="container flex-1">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex: 1 (flex-grow all items)</h3>
+            <div class="container flex-2">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex: [a=150px 0, b=1, c=0]</h3>
+            <div class="container flex-3">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>flex: 1 1 200px (flex-grow=1, flex-shrink=1, flex-basis=200px)</h3>
+            <div class="container flex-4">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

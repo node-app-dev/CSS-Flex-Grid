@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>grid</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .items {
+            padding: 0;
+        }
+
+        .rows-columns {
+            grid:
+                1fr 1fr 1fr / 1fr 1fr 1fr
+        }
+
+        .areas {
+            grid:
+                'a b c'
+                'd e f'
+                'g h i';
+        }
+
+        .row-columns-area {
+            grid:
+                'a b c'1fr 'd e f'2fr 'g h i'1fr / 1fr 2fr 1fr;
+        }
+
+        .auto-flow-auto-rows-columns {
+            grid: auto-flow 100px / 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .rows-auto-flow-auto-columns {
+            grid: 1fr 1fr 1fr / auto-flow 100px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .areas .item-a,
+        .row-columns-area .item-a {
+            grid-area: a;
+        }
+
+        .areas .item-b,
+        .row-columns-area .item-b {
+            grid-area: b;
+        }
+
+        .areas .item-c,
+        .row-columns-area .item-c {
+            grid-area: c;
+        }
+
+        .areas .item-d,
+        .row-columns-area .item-d {
+            grid-area: d;
+        }
+
+        .areas .item-e,
+        .row-columns-area .item-e {
+            grid-area: e;
+        }
+
+        .areas .item-f,
+        .row-columns-area .item-f {
+            grid-area: f;
+        }
+
+        .areas .item-g,
+        .row-columns-area .item-g {
+            grid-area: g;
+        }
+
+        .areas .item-h,
+        .row-columns-area .item-h {
+            grid-area: h;
+        }
+
+        .areas .item-i {
+            grid-area: i;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>grid</h2>
+        <p style="margin-top: 0; margin-bottom: 10px"><b>grid</b> shorthand for (grid-template-rows |
+            grid-template-columns | grid-template-areas) or (grid-auto-rows | grid-auto-columns | grid-auto-flow)</p>
+        <p style="margin-top: 0; margin-bottom: 10px">should be used after grid property because the <b>grid</b> will
+            replace them.</p>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>grid: 1fr 1fr 1fr / 1fr 1fr 1fr (rows / columns)</h3>
+            <div class="container rows-columns">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid: 'a b c' 'd e f' 'g h i' (areas)</h3>
+            <div class="container areas">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid: <span style="font-size: 17px">'a b c' 1fr 'd e f' 2fr 'g h i' 1fr / 1fr 2fr 1fr (area
+                    rows / columns)</span></h3>
+            <div class="container row-columns-area">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid: <span style="font-size: 16px">auto-flow 100px / 1fr 1fr 1fr (auto-flow dense? auto-rows /
+                    columns)</span></h3>
+            <div class="container auto-flow-auto-rows-columns">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid: <span style="font-size: 16px">1fr 1fr 1fr / auto-flow 100px (rows / auto-flow dense?
+                    auto-columns)</span></h3>
+            <div class="container rows-auto-flow-auto-columns">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

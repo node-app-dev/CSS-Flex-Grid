@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>flex-wrap</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .items {
+            width: 150px;
+            height: 150px;
+            flex-grow: 1;
+            padding: 20px 27px;
+        }
+
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>flex-wrap</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>flex-wrap: nowrap (default)</h3>
+            <div class="container nowrap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+        <section>
+            <h3>flex-wrap: wrap</h3>
+            <div class="container wrap">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+
+
+        <section>
+            <h3>flex-wrap: wrap-reverse</h3>
+            <div class="container wrap-reverse">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

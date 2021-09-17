@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>repeat()</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .repeat-1 {
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        }
+
+        .repeat-2 {
+            grid-template: repeat(2, 1fr) / repeat(4, max-content);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>repeat()</h2>
+        <p style="margin-top: 0; margin-bottom: 10px">use <b>repeat()</b> with grid-template-rows or
+            grid-template-columns</p>
+
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>grid-template: repeat(3, 1fr) / repeat(3, 1fr)</h3>
+            <div class="container repeat-1">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-template: repeat(2, 1fr) / repeat(4, max-content)</h3>
+            <div class="container repeat-2">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+                <div class="items item-i">I</div>
+            </div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

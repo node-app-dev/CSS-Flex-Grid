@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>grid-auto-flow</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .container {
+            display: grid;
+        }
+
+        .row {
+            grid-template-areas: 'a b c d''e f g h';
+            grid-auto-flow: row;
+        }
+
+        .column {
+            grid-template-areas: 'a b''c d''e f''g h';
+            grid-auto-flow: column;
+        }
+
+        .row-dense {
+            grid-auto-flow: row dense;
+        }
+
+        .without-dense .item-b,
+        .row-dense .item-b {
+            background-color: #ff0037;
+            grid-column: 4 / 5;
+        }
+
+        .column-dense {
+            grid-auto-flow: column dense;
+        }
+
+        .column-dense .item-b {
+            background-color: #ff0037;
+            grid-row: 4 / 5;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2>grid-auto-flow</h2>
+    </section>
+    <section class="main">
+
+        <section>
+            <h3>grid-auto-flow: row (default)</h3>
+            <div class="container row">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-auto-flow: column</h3>
+            <div class="container column">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>without dense item-b position 5/6</h3>
+            <div class="container without-dense">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-auto-flow: row dense</h3>
+            <div class="container row-dense">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>grid-auto-flow: column dense</h3>
+            <div class="container column-dense">
+                <div class="items item-a">A</div>
+                <div class="items item-b">B</div>
+                <div class="items item-c">C</div>
+                <div class="items item-d">D</div>
+                <div class="items item-e">E</div>
+                <div class="items item-f">F</div>
+                <div class="items item-g">G</div>
+                <div class="items item-h">H</div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

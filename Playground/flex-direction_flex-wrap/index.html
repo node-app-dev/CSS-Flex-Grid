@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>flex-direction | flex-wrap Playground</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .selector {
+            grid-template-columns: 1fr 2fr;
+            justify-content: center;
+            margin-top: 12px;
+            margin-left: 50px;
+            column-gap: 10px;
+        }
+
+        .selector-wrap {
+            margin-left: 10px;
+            grid-template-columns: auto auto auto;
+        }
+
+        .selector div {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .items {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="heading">
+        <h2 style="margin-top: 0">Properties for the flex direction or wrap</h2>
+    </section>
+
+    <section class="main">
+
+        <div class="selector-container" id="selectorContainer">
+
+            <!-- Container -->
+            <h4 class="title">Container</h4>
+
+            <!-- flex-direction -->
+            <div>
+                <label>flex-direction: </label>
+
+                <div class="selector" id="flexDirection" style="margin-bottom: 20px">
+                    <div>
+                        <label for="row">row </label>
+                        <input type="radio" class="form-check-input" name="direction" id="row" value="row" checked>
+                    </div>
+                    <div>
+                        <label for="rowReverse">row-reverse </label>
+                        <input type="radio" class="form-check-input" name="direction" id="rowReverse"
+                            value="row-reverse">
+                    </div>
+                    <div>
+                        <label for="column">column </label>
+                        <input type="radio" class="form-check-input" name="direction" id="column" value="column">
+                    </div>
+                    <div>
+                        <label for="columnReverse">column-reverse </label>
+                        <input type="radio" class="form-check-input" name="direction" id="columnReverse"
+                            value="column-reverse">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>flex-wrap: </label>
+
+                <div class="selector selector-wrap" id="flexWrap" style="margin-bottom: 20px">
+                    <div>
+                        <label for="nowrap">nowrap </label>
+                        <input type="radio" class="form-check-input" name="wrap" id="nowrap" value="nowrap" checked>
+                    </div>
+                    <div>
+                        <label for="wrap">wrap </label>
+                        <input type="radio" class="form-check-input" name="wrap" id="wrap" value="wrap">
+                    </div>
+                    <div>
+                        <label for="wrapReverse">wrap-reverse </label>
+                        <input type="radio" class="form-check-input" name="wrap" id="wrapReverse" value="wrap-reverse">
+                    </div>
+                </div>
+            </div>
+
+            <!-- flex-flow -->
+            <div>
+                <h4 class="title" style="margin-top: 40px;">flex-flow shorthand for:</h4>
+                <div>
+                    <p>flex-flow:&nbsp; flex-direction &nbsp;|&nbsp; flex-wrap</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- selector-container end -->
+
+
+        <!-- Container -->
+        <div class="container" id="container">
+            <div class="items item-a">A</div>
+            <div class="items item-b">B</div>
+            <div class="items item-c">C</div>
+            <div class="items item-d">D</div>
+            <div class="items item-e">E</div>
+            <div class="items item-f">F</div>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
