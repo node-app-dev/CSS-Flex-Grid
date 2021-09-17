@@ -24,8 +24,8 @@
   [`grid-auto-flow`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/grid-auto-flow)\
   [`grid`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/grid)\
   [`justify-items`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/justify-items)\
-  [`place-items`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/place-items)
-  [`grid-web-layout`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/grid-auto-flowhttps://jabed-dev.github.io/CSS-Flex-Grid/grid/grid-web-layout)
+  [`place-items`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/place-items)\
+  [`grid-web-layout`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/grid-web-layout)
 
 ### Grid Container functions and keyword
   [`fit-content()`](https://jabed-dev.github.io/CSS-Flex-Grid/grid/fit-content)\
