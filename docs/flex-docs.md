@@ -33,13 +33,13 @@ flex-flow:
 ```css
 align-content: or justify-content:
     normal
+    stretch
     flex-start
     center
     flex-end
     space-around
     space-between
     space-evenly
-    stretch
 ```
 <br>
 
