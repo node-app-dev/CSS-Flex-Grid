@@ -111,13 +111,13 @@ selectorContainer.addEventListener('change', function (event) {
         if (checkbox[i].checked) {
             container.style.gridTemplate = `'a b' 'c d'`;
             Array.from(items).forEach(item => {
-                item.style.flex = '0 150px';
+                item.style.flex = '0 200px';
             });
             break;
         } else {
             container.style.gridTemplate = 'none';
             Array.from(items).forEach(item => {
-                item.style.flexBasis = 1;
+                item.style.flex = 1;
             });
         }
     }
