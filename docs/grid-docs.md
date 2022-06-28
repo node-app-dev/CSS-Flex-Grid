@@ -13,7 +13,7 @@ grid-template-rows: or grid-template-columns:
     repeat(length, size)            length = repeat numbers or size = repeat size
     min-content                     min-content = content minimum size
     max-content                     max-content = content maximum size
-    minmax(min-size, max-size)      min-size = content minimum width or hight and max-size content maximum width or 
+    minmax(min-size, max-size)      min-size = content minimum width or height and max-size content maximum width or height
 
 example:
     1fr 2fr 1fr
